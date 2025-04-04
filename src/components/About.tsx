@@ -45,8 +45,8 @@ const About = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-start">
           <div className="lg:col-span-5">
-            <div className="relative h-[400px]">
-              <div className="bg-gray-100 rounded-2xl overflow-hidden z-10 relative h-full">
+            <div className="relative h-auto">
+              <div className="bg-gray-100 rounded-2xl overflow-hidden z-10 relative">
                 <img 
                   src="/lovable-uploads/1777892e-debe-48e7-b9a6-4e35347f6790.png" 
                   alt="Portrait" 
@@ -63,16 +63,16 @@ const About = () => {
           </div>
           
           <div className="lg:col-span-7">
-            <div className="space-y-4 mt-1">
-              <div className="inline-block px-3 py-1 bg-[#3E40EF]/10 text-[#3E40EF] rounded-full text-sm font-medium">
+            <div className="space-y-4">
+              <div className="inline-block px-3 py-1 bg-[#3E40EF]/10 text-[#3E40EF] rounded-full text-sm font-medium mb-1">
                 <Award className="inline-block mr-2 h-4 w-4" />
                 Nice to meet you
               </div>
               
-              <div className="relative overflow-hidden">
-                <h3 className="leading-tight">
+              <div>
+                <h3 className="leading-tight inline-flex flex-wrap">
                   I'm a{' '}
-                  <span className="relative inline-block">
+                  <span className="relative mx-1">
                     <span className={`relative z-10 ${isHighlighted ? 'text-white' : 'text-[#3E40EF]'}`}>
                       Product Designer
                     </span>
@@ -81,9 +81,7 @@ const About = () => {
                       style={{ zIndex: 5 }}
                     ></div>
                   </span>
-                </h3>
-                <h3 className="leading-tight mt-1">
-                  <span className="relative inline-block">
+                  <span className="relative">
                     <span className={`relative z-10 ${isHighlighted ? 'text-white' : 'text-gray-700'}`}>
                       with a passion for creating user-centered digital experiences
                     </span>
@@ -95,19 +93,19 @@ const About = () => {
                 </h3>
               </div>
               
-              <div className="bg-white rounded-lg border border-gray-200 p-6 relative shadow-md h-[400px] overflow-auto">
+              <div className="bg-white rounded-lg border border-gray-200 p-5 relative shadow-md h-auto max-h-[350px] overflow-auto mt-2">
                 <div className="absolute top-4 right-4 flex gap-2">
                   <Circle className="h-3 w-3 fill-red-500 text-red-500" />
                   <Circle className="h-3 w-3 fill-yellow-500 text-yellow-500" />
                   <Circle className="h-3 w-3 fill-green-500 text-green-500" />
                 </div>
-                <p className="text-gray-600 font-mono text-sm mb-4">
+                <p className="text-gray-600 font-mono text-sm mb-3">
                   {'// Personal description'}
                 </p>
-                <p className="text-gray-700 font-mono">
+                <p className="text-gray-700 font-mono text-sm">
                   With over 5 years of experience in UI/UX design, I've had the privilege of working on a diverse range of projects, from innovative startups to established enterprises. My design philosophy revolves around understanding user needs and business goals to create solutions that are both beautiful and functional.
                 </p>
-                <p className="text-gray-700 font-mono mt-4">
+                <p className="text-gray-700 font-mono text-sm mt-3">
                   I currently serve as Chief Product Officer at Imaginum, where I lead the design and strategy of our digital products. Previously, I spearheaded design initiatives as Tech & Design Head at CSED.
                 </p>
               </div>
@@ -116,41 +114,41 @@ const About = () => {
         </div>
         
         {/* Info boxes row - evenly distributed below the main content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-          <div className="p-5 rounded-lg bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-5px] group">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5">
+          <div className="p-4 rounded-lg bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-5px] group">
             <div className="flex items-start gap-3">
               <div className="p-2 rounded-full bg-[#3E40EF]/10 text-[#3E40EF] group-hover:bg-[#3E40EF] group-hover:text-white transition-colors">
                 <GraduationCap className="h-5 w-5" />
               </div>
               <div>
                 <h4 className="text-lg font-bold mb-1 text-[#3E40EF]">Education</h4>
-                <p className="text-gray-700">B.Tech in ECE<br />
+                <p className="text-gray-700 text-sm">B.Tech in ECE<br />
                 Vellore Institute of Technology, 2022-2026</p>
               </div>
             </div>
           </div>
           
-          <div className="p-5 rounded-lg bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-5px] group">
+          <div className="p-4 rounded-lg bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-5px] group">
             <div className="flex items-start gap-3">
               <div className="p-2 rounded-full bg-[#3E40EF]/10 text-[#3E40EF] group-hover:bg-[#3E40EF] group-hover:text-white transition-colors">
                 <MapPin className="h-5 w-5" />
               </div>
               <div>
                 <h4 className="text-lg font-bold mb-1 text-[#3E40EF]">Location</h4>
-                <p className="text-gray-700">Based in India<br />
+                <p className="text-gray-700 text-sm">Based in India<br />
                 Available for remote work</p>
               </div>
             </div>
           </div>
           
-          <div className="p-5 rounded-lg bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-5px] group">
+          <div className="p-4 rounded-lg bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-5px] group">
             <div className="flex items-start gap-3">
               <div className="p-2 rounded-full bg-[#3E40EF]/10 text-[#3E40EF] group-hover:bg-[#3E40EF] group-hover:text-white transition-colors">
                 <Award className="h-5 w-5" />
               </div>
               <div>
                 <h4 className="text-lg font-bold mb-1 text-[#3E40EF]">Experience</h4>
-                <p className="text-gray-700">5+ years in UI/UX<br />
+                <p className="text-gray-700 text-sm">5+ years in UI/UX<br />
                 Design & Product Strategy</p>
               </div>
             </div>
