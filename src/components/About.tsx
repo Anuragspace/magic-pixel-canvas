@@ -36,14 +36,14 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="section-padding relative overflow-hidden py-12 md:py-16">
+    <section id="about" className="section-padding relative overflow-hidden py-10 md:py-14">
       <div className="container-custom">
-        <div className="mb-8">
+        <div className="mb-6">
           <h2 className="mb-3">About Me</h2>
           <div className="w-24 h-1 bg-[#3E40EF]"></div>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-start">
           <div className="lg:col-span-5">
             <div className="relative h-[400px]">
               <div className="bg-gray-100 rounded-2xl overflow-hidden z-10 relative h-full">
@@ -63,17 +63,17 @@ const About = () => {
           </div>
           
           <div className="lg:col-span-7">
-            <div className="space-y-5">
-              <div className="inline-block px-3 py-1 bg-[#3E40EF]/10 text-[#3E40EF] rounded-full text-sm font-medium mt-1">
+            <div className="space-y-4 mt-1">
+              <div className="inline-block px-3 py-1 bg-[#3E40EF]/10 text-[#3E40EF] rounded-full text-sm font-medium">
                 <Award className="inline-block mr-2 h-4 w-4" />
                 Nice to meet you
               </div>
               
               <div className="relative overflow-hidden">
                 <h3 className="leading-tight">
+                  I'm a{' '}
                   <span className="relative inline-block">
-                    I'm a{' '}
-                    <span className={`relative z-10 ${isHighlighted ? 'text-white px-1' : 'text-[#3E40EF]'}`}>
+                    <span className={`relative z-10 ${isHighlighted ? 'text-white' : 'text-[#3E40EF]'}`}>
                       Product Designer
                     </span>
                     <div 
@@ -84,7 +84,9 @@ const About = () => {
                 </h3>
                 <h3 className="leading-tight mt-1">
                   <span className="relative inline-block">
-                    with a passion for creating user-centered digital experiences
+                    <span className={`relative z-10 ${isHighlighted ? 'text-white' : 'text-gray-700'}`}>
+                      with a passion for creating user-centered digital experiences
+                    </span>
                     <div 
                       className={`absolute bottom-0 left-0 h-full bg-[#3E40EF] transition-all duration-1000 ease-in-out ${isVisible ? (isHighlighted ? 'w-full' : 'w-0') : 'w-0'}`} 
                       style={{ zIndex: 5, transitionDelay: '0.4s' }}
@@ -113,41 +115,41 @@ const About = () => {
           </div>
         </div>
         
-        {/* Info boxes row below the photo and code box */}
-        <div className="grid grid-cols-3 gap-4 mt-6">
-          <div className="p-6 rounded-lg bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-5px] group">
+        {/* Info boxes row - evenly distributed below the main content */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+          <div className="p-5 rounded-lg bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-5px] group">
             <div className="flex items-start gap-3">
               <div className="p-2 rounded-full bg-[#3E40EF]/10 text-[#3E40EF] group-hover:bg-[#3E40EF] group-hover:text-white transition-colors">
                 <GraduationCap className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="text-lg font-bold mb-2 text-[#3E40EF]">Education</h4>
+                <h4 className="text-lg font-bold mb-1 text-[#3E40EF]">Education</h4>
                 <p className="text-gray-700">B.Tech in ECE<br />
                 Vellore Institute of Technology, 2022-2026</p>
               </div>
             </div>
           </div>
           
-          <div className="p-6 rounded-lg bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-5px] group">
+          <div className="p-5 rounded-lg bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-5px] group">
             <div className="flex items-start gap-3">
               <div className="p-2 rounded-full bg-[#3E40EF]/10 text-[#3E40EF] group-hover:bg-[#3E40EF] group-hover:text-white transition-colors">
                 <MapPin className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="text-lg font-bold mb-2 text-[#3E40EF]">Location</h4>
+                <h4 className="text-lg font-bold mb-1 text-[#3E40EF]">Location</h4>
                 <p className="text-gray-700">Based in India<br />
                 Available for remote work</p>
               </div>
             </div>
           </div>
           
-          <div className="p-6 rounded-lg bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-5px] group">
+          <div className="p-5 rounded-lg bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-5px] group">
             <div className="flex items-start gap-3">
               <div className="p-2 rounded-full bg-[#3E40EF]/10 text-[#3E40EF] group-hover:bg-[#3E40EF] group-hover:text-white transition-colors">
                 <Award className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="text-lg font-bold mb-2 text-[#3E40EF]">Experience</h4>
+                <h4 className="text-lg font-bold mb-1 text-[#3E40EF]">Experience</h4>
                 <p className="text-gray-700">5+ years in UI/UX<br />
                 Design & Product Strategy</p>
               </div>
