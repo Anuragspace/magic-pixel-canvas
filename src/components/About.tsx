@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import RippleAnimation from "./RippleAnimation";
 import { Award, Circle, MapPin, GraduationCap } from "lucide-react";
@@ -45,8 +44,8 @@ const About = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-start">
           <div className="lg:col-span-5">
-            <div className="relative h-auto">
-              <div className="bg-gray-100 rounded-2xl overflow-hidden z-10 relative">
+            <div className="relative h-[420px]"> {/* Adjusted height */}
+              <div className="bg-gray-100 rounded-2xl overflow-hidden z-10 relative h-full">
                 <img 
                   src="/lovable-uploads/1777892e-debe-48e7-b9a6-4e35347f6790.png" 
                   alt="Portrait" 
@@ -74,16 +73,17 @@ const About = () => {
                   I'm a{' '}
                   <span className="relative mx-1">
                     <span className={`relative z-10 ${isHighlighted ? 'text-white' : 'text-[#3E40EF]'}`}>
-                      Product Designer
+                      Product Designer with a passion for 
                     </span>
                     <div 
                       className={`absolute bottom-0 left-0 h-full bg-[#3E40EF] transition-all duration-1000 ease-in-out ${isVisible ? (isHighlighted ? 'w-full' : 'w-0') : 'w-0'}`} 
                       style={{ zIndex: 5 }}
                     ></div>
                   </span>
-                  <span className="relative">
+                  <br /> {/* Added line break */}
+                  <span className="relative mt-2"> {/* Added vertical gap */}
                     <span className={`relative z-10 ${isHighlighted ? 'text-white' : 'text-gray-700'}`}>
-                      with a passion for creating user-centered digital experiences
+                      creating user-centered digital experiences
                     </span>
                     <div 
                       className={`absolute bottom-0 left-0 h-full bg-[#3E40EF] transition-all duration-1000 ease-in-out ${isVisible ? (isHighlighted ? 'w-full' : 'w-0') : 'w-0'}`} 
@@ -93,19 +93,19 @@ const About = () => {
                 </h3>
               </div>
               
-              <div className="bg-white rounded-lg border border-gray-200 p-5 relative shadow-md h-auto max-h-[350px] overflow-auto mt-2">
+              <div className="bg-white rounded-lg border border-gray-200 p-5 relative shadow-md h-auto max-h-[400px] overflow-auto mt-2 group"> {/* Added group class */}
                 <div className="absolute top-4 right-4 flex gap-2">
                   <Circle className="h-3 w-3 fill-red-500 text-red-500" />
                   <Circle className="h-3 w-3 fill-yellow-500 text-yellow-500" />
                   <Circle className="h-3 w-3 fill-green-500 text-green-500" />
                 </div>
-                <p className="text-gray-600 font-mono text-sm mb-3">
+                <p className="text-gray-600 font-mono text-sm mb-3 description-text"> {/* Added description-text class */}
                   {'// Personal description'}
                 </p>
-                <p className="text-gray-700 font-mono text-sm">
+                <p className="text-gray-700 font-mono text-sm description-text"> {/* Added description-text class */}
                   With over 5 years of experience in UI/UX design, I've had the privilege of working on a diverse range of projects, from innovative startups to established enterprises. My design philosophy revolves around understanding user needs and business goals to create solutions that are both beautiful and functional.
                 </p>
-                <p className="text-gray-700 font-mono text-sm mt-3">
+                <p className="text-gray-700 font-mono text-sm mt-3 description-text"> {/* Added description-text class */}
                   I currently serve as Chief Product Officer at Imaginum, where I lead the design and strategy of our digital products. Previously, I spearheaded design initiatives as Tech & Design Head at CSED.
                 </p>
               </div>
