@@ -73,7 +73,7 @@ const About = () => {
                   I'm a{' '}
                   <span className="relative mx-1">
                     <span className={`relative z-10 ${isHighlighted ? 'text-white' : 'text-[#3E40EF]'}`}>
-                      Product Designer with a passion for 
+                      UI/UX Designer with a passion for 
                     </span>
                     <div 
                       className={`absolute bottom-0 left-0 h-full bg-[#3E40EF] transition-all duration-1000 ease-in-out ${isVisible ? (isHighlighted ? 'w-full' : 'w-0') : 'w-0'}`} 
